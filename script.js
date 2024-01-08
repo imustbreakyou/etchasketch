@@ -9,7 +9,7 @@
 // sketch container DOESNT CHANGE Sizes just the squares within
 // Input number into field with 100 as max 
 // input = n 
-//button now creates n x n div squares 
+
 
 // NEXT 
 // Set up hover class and hover functionality to turn a square black.... 

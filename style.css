@@ -1,6 +1,15 @@
     
+    .button-container {
+   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+    }
+    
     .main {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -13,6 +22,10 @@
         border: 2px dashed red;
         min-width: 75vh;
         height: 75vh;
+    }
+
+    .footer {
+        min-height: 50px;
     }
     
 
