@@ -1,12 +1,49 @@
 
-const createButton = document.querySelector('#create');
+const create = document.querySelector('#create');
 const etchContainer = document.querySelector('#etch');
-const clearButton = document.querySelector('#create');
 
 
-createButton.addEventListener('click', () => {
+// Fade Slider
+
+//const fadeSliderId = document.getElementById('#fade-slider-id');
+
+//fadeSliderId.addEventListener('input', function () {
+   // console.log('Fade slider value (during slide):', this.value);
+
+//});
+
+//fadeSliderId.addEventListener('change', function () {
+   // console.log('Fade Slider value (after release):', this.value);
+   // let fadeInput = this.value ;
+
+//});
+
+// Grid Slider
+
+const gridSliderId = document.getElementById('grid-slider-id');
+const gridSliderValue = document.getElementById('grid-slider-value');
+
+gridSliderId.addEventListener('input', function () {
+    
+    console.log('Grid Slider value (during slide):', this.value);
+    gridSliderValue.innerHTML = this.value;
+
+
+});
+
+gridSliderId.addEventListener('change', function () {
+    console.log('Grid Slider value (after release):', this.value);
+    createGrid(parseInt(this.value));
+
+});
+
+
+// Create Grid Function
+
+
+function createGrid(gridInput, enableGradien= false, fadeInput = 0) {
     etchContainer.innerHTML = '';
-    let input = prompt("How large would you like your grid?", "0");
+    let input = gridInput;
         let text;
         if (input === null || input > 100 || input <= 0 || input === ''|| isNaN(input)) {
             text = "please enter a value between 0 and 100";
@@ -43,7 +80,7 @@ createButton.addEventListener('click', () => {
             }
         }
         
-        });    
+        };    
 
 
 

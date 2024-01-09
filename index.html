@@ -14,8 +14,14 @@
           <div class="main-left-margin-selector-container">
             <button id="clear">clear</button>
             <button id="toggle-gradient">gradient: off</button>
-            <button id="erase-delay">pick erase delay</button>
-            <input id="create"></input>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="5000" class="slider" id="fade-slider-id">
+              <label for="fade-silder-value"></label>
+            </div>
+            <div class="slidecontainer">
+              <input type="range" min="2" max="100" value="50" class="slider" id="grid-slider-id">
+              <div id="grid-slider-value" value="50">50</div>
+            </div>
           </div>
         </div>
         <div id="etch" class="etch-container"></div>
