@@ -1,6 +1,7 @@
 
 const createButton = document.querySelector('#create');
-const etchContainer = document.querySelector('#etch')
+const etchContainer = document.querySelector('#etch');
+const clearButton = document.querySelector('#create');
 
 
 createButton.addEventListener('click', () => {
