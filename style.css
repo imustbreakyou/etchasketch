@@ -1,18 +1,78 @@
-    
-    .button-container {
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        
+
+    }
+
+    .header {
+        margin: 0px;
+    }
+
+    .instructions-container {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid pink;
+
+    }
+
+    .instructions-header {
+        border: 1px solid darkred;
+
+    }
+
+    .instructions-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid red;
+        margin-left: 5px;
+        padding-left: 0px;
+
+    }
+
+    .header,
+    .footer {
+        display: flex;
+        border: 1px solid purple;
+        flex: 1;
+        align-items: center;
+        min-height: 50px;
+        font-family: Courier;
+        font-size: 48px;
+        font-weight: 700;
+        
+  
+    }
+
+
+    .main-right-margin,
+    .main-left-margin {
    
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: stretch;
         padding: 50px;
+        border: 1px solid limegreen;
+    }
+
+    .main-left-margin-selector-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     
     .main {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex: 1;
+        
+        
         height: 100vh;
+        margin: 0px;
     }
 
     .etch-container {
@@ -26,8 +86,3 @@
         
 
     }
-
-    .footer {
-        min-height: 50px;
-    }
-    
