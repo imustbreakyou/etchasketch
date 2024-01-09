@@ -1,22 +1,31 @@
 
 const create = document.querySelector('#create');
 const etchContainer = document.querySelector('#etch');
+const clearGridButton = document.querySelector('#clear-grid');
+let gridSize = 0;
+let fadeActive = false;
+let fadeValue = 0;
 
 
 // Fade Slider
 
-//const fadeSliderId = document.getElementById('#fade-slider-id');
+const fadeSliderId = document.getElementById('fade-slider-id');
+const fadeSliderValue = document.getElementById('fade-slider-value');
 
-//fadeSliderId.addEventListener('input', function () {
-   // console.log('Fade slider value (during slide):', this.value);
+fadeSliderId.addEventListener('input', function () {
+   console.log('Fade slider value (during slide):', this.value);
+   delayInSeconds = (parseInt(this.value) / 1000).toFixed(1);
+   
+   fadeSliderValue.innerHTML = `${delayInSeconds} second delay` 
 
-//});
+});
 
-//fadeSliderId.addEventListener('change', function () {
-   // console.log('Fade Slider value (after release):', this.value);
-   // let fadeInput = this.value ;
+fadeSliderId.addEventListener('change', function () {
+   console.log('Fade Slider value (after release):', this.value);
 
-//});
+ 
+
+});
 
 // Grid Slider
 
@@ -26,14 +35,23 @@ const gridSliderValue = document.getElementById('grid-slider-value');
 gridSliderId.addEventListener('input', function () {
     
     console.log('Grid Slider value (during slide):', this.value);
-    gridSliderValue.innerHTML = this.value;
+    gridSliderValue.innerHTML = `${this.value} x ${this.value}`;
 
 
 });
 
 gridSliderId.addEventListener('change', function () {
     console.log('Grid Slider value (after release):', this.value);
+    gridSize = this.value;
     createGrid(parseInt(this.value));
+    return gridSize;
+
+});
+
+// clear grid 
+clearGridButton.addEventListener('click', function () {
+    etchContainer.innerHTML = '';
+    createGrid(gridSize);
 
 });
 
@@ -41,7 +59,7 @@ gridSliderId.addEventListener('change', function () {
 // Create Grid Function
 
 
-function createGrid(gridInput, enableGradien= false, fadeInput = 0) {
+function createGrid(gridInput) {
     etchContainer.innerHTML = '';
     let input = gridInput;
         let text;
