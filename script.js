@@ -1,3 +1,29 @@
+const n = 10;
+
+const createButton = document.querySelector('#create');
+const etchContainer = document.querySelector('#etch')
+etchContainer.style.setProperty('--n', n);
+
+createButton.addEventListener('click', () => {
+    etchContainer.innerHTML = '';
+
+   
+    for (let i = 0; i < n ; i++) {
+        const row = document.createElement('div');
+        row.setAttribute('style', 'display: flex; flex: 1; padding: 0px; margin: 0px; ');
+        etchContainer.appendChild(row);
+
+        for (let j = 0; j < n ; j++) {
+            const square = document.createElement('div');
+            square.setAttribute('style',' border: 1px solid black; padding-bottom: calc(100% / var(--n)); width: calc(100% / var(--n)); padding: 0px; margin: 0px; ' );
+            row.appendChild(square);
+        }
+    }
+        
+
+});    
+
+
 
 // have a button that populates and centers a grid of 16x16 squares
 // button click
