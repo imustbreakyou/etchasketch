@@ -8,19 +8,25 @@
 <body>
 
   <div class="body">
-    <div class="header">Etch-a-sketch</div>
+    <div class="header-container">
+
+        <div class="header">Click-a-Sketch</div>
+       
+      </div>
     <div class="main">
         <div class="main-left-margin">
           <div class="main-left-margin-selector-container">
             <button id="clear-grid">clear grid</button>
-            <button id="toggle-gradient">gradient: off</button>
-            <div class="slidecontainer">
-              <input type="range" min="500" max="5000" value="0" class="slider" id="fade-slider-id">
-              <div id="fade-slider-value">0 second delay</div>
-            </div>
+            <!--Keeping Fade slider in becasue I would like to reference what I learned for future use-->
+            <!--<div class="slidecontainer"> - 
+              <input type="range" min="0" max="5000" value="0" class="slider" id="fade-slider-id">
+              <div id="fade-slider-value">fade after 0.0 seconds</div>
+            </div> -->
+            <br>
+
             <div class="slidecontainer">  
               <input type="range" min="16" max="100" value="16" class="slider" id="grid-slider-id">
-              <div id="grid-slider-value" value="16">16 x 16</div>
+              <div id="grid-slider-value" value="16">'16 x 16' grid</div>
             </div>
           </div>
         </div>
@@ -28,11 +34,11 @@
         <div class="main-right-margin">
           <div class="instructions-container">
             <div class="instructions-header">Instructions</div>
-            <ul class="instructions-list">
-              <l1> d</l1>
-              <l1> d</l1>
-              <l1> d</l1>
-            </ul>
+            <ol class="instructions-list">
+              <l1>1. Click to sketch!</l1><br>
+              <l1>2. Change Grid Resolution with slider</l1><br>
+              <l1>3. Clear Grid with the Clear Grid Button </l1><br>
+            </ol>
           </div>
         </div>
     </div>
