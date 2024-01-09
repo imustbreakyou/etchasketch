@@ -17,11 +17,12 @@
 
     .etch-container {
         display: flex;
+        flex: 0 0 0;
         flex-direction: column;
         border: 4px outset darkblue;
-        min-width: 75vh;
-        height: 75vh;
-        max-width: 100vh;
+        min-width: 500px;
+        min-height: 500px;
+       
         
 
     }
